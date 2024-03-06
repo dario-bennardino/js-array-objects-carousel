@@ -44,14 +44,21 @@ const images = [
     }
 ]
 
-//creo ciclo delle immagini e ad ogni ciclo aggiungo il tag con l'immagine
-for(let i = 0; i < images.length; i++){
-    const img = images[i];
-   itemsWrapper.innerHTML += `<img class="img hide" src="${img}">`
-    
-}
+
+
+images.forEach(function(image) {
+    // Aggiungo il tag con l'immagine titolo e descrizione
+    itemsWrapper.innerHTML += `
+            <img class="img" src="${image.url}">
+            <h2 class="titolo-img">${image.titolo}</h2>
+            <p class="descrizione-img">${image.descrizione}</p>
+            `;
+});
+
+
 
 //prendo tutti gli elementi con la classe img
+
 const itemsCollection = document.getElementsByClassName('img');
 
 //mi restituisce un html collection ovvero array che come elemento ha un elemento html 

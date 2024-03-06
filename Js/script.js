@@ -51,7 +51,7 @@ const images = [
         sliderNew.innerHTML += `
 
                 <div class="items-wrapper">
-                    <img class="img" src="${image.url}">
+                    <img class="img hide" src="${image.url}">
                     <h2 class="titolo-img">${image.titolo}</h2>
                     <p class="descrizione-img">${image.descrizione}</p>
                 </div>

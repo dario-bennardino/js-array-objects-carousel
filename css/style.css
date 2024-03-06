@@ -69,11 +69,13 @@
     position: absolute;
     top: 25px;
     right: 50px;
+    color: white;
 }
 
 .descrizione-img{
     position: absolute;
     top: 50px;
     right: 50px;
+    color: white;
 }
 

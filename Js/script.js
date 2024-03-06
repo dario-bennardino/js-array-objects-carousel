@@ -5,6 +5,7 @@
 const itemsWrapper = document.querySelector('.items-wrapper');
 const btnUp = document.querySelector('.btn-up');
 const btnDown = document.querySelector('.btn-down');
+const sliderNew = document.querySelector('.slider');
 
 //nascondo il bottone btnDown di default
 btnDown.classList.add('hide')
@@ -20,22 +21,22 @@ const images = [
 
     url:'img/01.webp',
       titolo: 'Spiderman',
-      descrizione: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam est quisquam esse sapiente cumque deleniti placeat nemo obcaecati. Exercitationem suscipit odit praesentium.',
+      descrizione: 'La saga di Spiderman',
     },
     {
         url:'img/02.webp',
         titolo: 'Dog',
-        descrizione: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam est quisquam esse sapiente cumque deleniti placeat nemo obcaecati.',
+        descrizione: 'Film supereroi Dog',
     },
     {
         url:'img/03.webp',
         titolo: 'Starwars',
-        descrizione: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam est quisquam esse sapiente cumque',
+        descrizione: 'I magnifici personaggi di Satrwars',
     },
     {
         url:'img/04.webp',
         titolo: 'Cat',
-        descrizione: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        descrizione: 'Film supereroi Gatto',
     },
     {
         url:'img/05.webp',
@@ -45,21 +46,26 @@ const images = [
 ]
 
 
+    images.forEach(function (image) {
+        // Aggiungo il tag con l'immagine titolo e descrizione
+        sliderNew.innerHTML += `
 
-images.forEach(function(image) {
-    // Aggiungo il tag con l'immagine titolo e descrizione
-    itemsWrapper.innerHTML += `
-            <img class="img" src="${image.url}">
-            <h2 class="titolo-img">${image.titolo}</h2>
-            <p class="descrizione-img">${image.descrizione}</p>
-            `;
-});
+                <div class="items-wrapper">
+                    <img class="img" src="${image.url}">
+                    <h2 class="titolo-img">${image.titolo}</h2>
+                    <p class="descrizione-img">${image.descrizione}</p>
+                </div>
+                <div class="btn-arrow btn-up">&uarr;</div>
+                <div class="btn-arrow btn-down">&darr;</div>
+                `;
+            });
 
 
 
 //prendo tutti gli elementi con la classe img
 
 const itemsCollection = document.getElementsByClassName('img');
+
 
 //mi restituisce un html collection ovvero array che come elemento ha un elemento html 
 // console.log(itemsCollection);
@@ -85,7 +91,7 @@ let autoplayTimer; // Variabile per memorizzare l'ID dell'intervallo
 
 
 // Utilizzo la funzione startAutoplay 
-startAutoplay();
+// startAutoplay();
 
 
 //FUNZIONI

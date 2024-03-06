@@ -65,3 +65,15 @@
     top: 10px;
 }
 
+.titolo-img{
+    position: absolute;
+    top: 25px;
+    right: 50px;
+}
+
+.descrizione-img{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+

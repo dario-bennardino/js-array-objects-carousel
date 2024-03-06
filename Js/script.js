@@ -13,12 +13,35 @@ btnDown.classList.add('hide')
 let counterImg = 0;
 
 
-const images = [ 
-    'img/01.webp',
-    'img/02.webp',
-    'img/03.webp',
-    'img/04.webp',
-    'img/05.webp',
+//INIZIO NUOVO ESERCIZIO
+
+const images = [
+    {
+
+    url:'img/01.webp',
+      titolo: 'Spiderman',
+      descrizione: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam est quisquam esse sapiente cumque deleniti placeat nemo obcaecati. Exercitationem suscipit odit praesentium.',
+    },
+    {
+        url:'img/02.webp',
+        titolo: 'Dog',
+        descrizione: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam est quisquam esse sapiente cumque deleniti placeat nemo obcaecati.',
+    },
+    {
+        url:'img/03.webp',
+        titolo: 'Starwars',
+        descrizione: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam est quisquam esse sapiente cumque',
+    },
+    {
+        url:'img/04.webp',
+        titolo: 'Cat',
+        descrizione: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    },
+    {
+        url:'img/05.webp',
+        titolo: 'Marvel',
+        descrizione: 'I magnifici super eroi',
+    }
 ]
 
 //creo ciclo delle immagini e ad ogni ciclo aggiungo il tag con l'immagine
